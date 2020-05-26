@@ -2,13 +2,13 @@
 #cleartasksbtn{
 
     position: fixed;
-    bottom: 40%;
-    right: 5%;
+    bottom: 15%;
+    right: 0%;
 }
 
 #task{
     position: fixed;
-    bottom: 5%;
+    bottom: 1%;
     background-color: black;
     color: white;
 }
@@ -22,12 +22,13 @@
 
 #addtaskbtn{
     position: fixed;
-    right: 5%;  
-    bottom: 10%
+    right: 0%;
+    bottom: 1%;
 }
 
 #addbutton{
     position: fixed;
-    bottom: 25%;
-    right: 5%;
+    bottom: 1%;
+    right: 10%;  
+
 }

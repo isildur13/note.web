@@ -51,6 +51,7 @@ function cleartextvalue(e){
     console.log(e.target.value)
     e.target.value = null
     console.log(e.target.value)
+
 }
 
 // Get tasks from Localstorage
@@ -119,10 +120,13 @@ function removeTaskFromLocalStorage(taskItem){
 
 function addbuttonevent(e){
     
+
     if(taskform.style.display !== 'none'){
         taskform.style.display='none'
+        addbutton.style.display = 'block'
     }else{
         taskform.style.display='block'
+        addbutton.style.display = 'none'
     }
 
 }
@@ -154,7 +158,7 @@ function addTask(e){
     taskInput.value = 'Enter the note here'
     taskform.style.display='none'
     
-
+    addbutton.style.display = 'block'
 
     e.preventDefault();
 }
