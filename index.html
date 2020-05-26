@@ -22,9 +22,11 @@
                     <div id="card-content">
                        
                         <div class="card-action">
-                            <h5 id="task-title"> Tasks </h5>
+                            <h6 id="task-title"> Note </h6>
+                            <div id="search">
                             <input type="text" name="filter" id="filter">
                             <label id="filter">Filter Tasks</label>
+                            </div>
                         </div>
                         <ul class="collection"></ul>
 
@@ -34,10 +36,8 @@
 
                 <div id="row">
                     <form id="task-form">
-                        <div class="input-field col s12">
-                            
+                        <div class="input-field">              
                             <input type="text" value="Enter the note here." name="task" id="task">
-                            
                             <!-- <label for="task">New Task</label> -->
                         </div>
                         <input id="addtaskbtn" type="submit" value="Add" class="btn-floating btn-large green">
@@ -47,7 +47,9 @@
         </div>
     </div>
     <a id="addbutton" class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">add</i></a>
+    <a id="searchbtn" class="btn-floating btn-large waves-effect waves-light black"><i class="material-icons">search</i></a>
     <a href="#" id="cleartasksbtn" class="clear-tasks btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></a>
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.js"

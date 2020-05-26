@@ -5,8 +5,8 @@ const clearBtn = document.querySelector('.clear-tasks')
 const filters = document.querySelector('#filter')
 const taskInput = document.querySelector('#task')
 const addbutton = document.querySelector('#addbutton')
-const taskform = document.querySelector('#task-form')
-
+const searchdiv = document.querySelector('#search')
+const searchbutton = document.querySelector('#searchbtn')
 
 // Load all Event Listeners
 loadEventListeners();
@@ -36,14 +36,29 @@ function removefromlocal(task){
 
 function loadEventListeners(){
     // Add task event
+    form.style.display='none'
     document.addEventListener('DOMContentLoaded',getTasks)
     form.addEventListener('submit',addTask);
     taskList.addEventListener('click',removeTask);
     clearBtn.addEventListener('click',clearTasks);
     filters.addEventListener('keyup',filterTasks);
     addbutton.addEventListener('click',addbuttonevent);
-    taskform.style.display='none'
-    taskInput.addEventListener('click',cleartextvalue)
+    taskInput.addEventListener('click',cleartextvalue);
+    searchbutton.addEventListener('click',showsearchfilter);
+}
+
+function showsearchfilter(e){
+
+    if(searchdiv.style.display !== 'none'){
+        // form.style.display='none'
+        searchdiv.style.display = 'none'
+    }else{
+        searchdiv.style.display = 'block'
+        // searchdiv.style.display = 'block'
+    }
+
+
+
 
 }
 
@@ -121,11 +136,11 @@ function removeTaskFromLocalStorage(taskItem){
 function addbuttonevent(e){
     
 
-    if(taskform.style.display !== 'none'){
-        taskform.style.display='none'
+    if(form.style.display !== 'none'){
+        form.style.display='none'
         addbutton.style.display = 'block'
     }else{
-        taskform.style.display='block'
+        form.style.display='block'
         addbutton.style.display = 'none'
     }
 
@@ -156,7 +171,7 @@ function addTask(e){
     storeinlocalstorage(taskInput.value);
 
     taskInput.value = 'Enter the note here'
-    taskform.style.display='none'
+    form.style.display='none'
     
     addbutton.style.display = 'block'
 
