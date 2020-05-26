@@ -1,0 +1,24 @@
+
+#cleartasksbtn{
+
+    position: fixed;
+    bottom: 40%;
+    right: 5%;
+}
+
+#task{
+    position: fixed;
+    bottom: 20px;
+}
+
+#addtaskbtn{
+    position: fixed;
+    right: 5%;  
+    bottom: 10%
+}
+
+#addbutton{
+    position: fixed;
+    bottom: 25%;
+    right: 5%;
+}
