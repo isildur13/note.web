@@ -43,7 +43,14 @@ function loadEventListeners(){
     filters.addEventListener('keyup',filterTasks);
     addbutton.addEventListener('click',addbuttonevent);
     taskform.style.display='none'
+    taskInput.addEventListener('click',cleartextvalue)
 
+}
+
+function cleartextvalue(e){
+    console.log(e.target.value)
+    e.target.value = null
+    console.log(e.target.value)
 }
 
 // Get tasks from Localstorage
@@ -72,6 +79,7 @@ function getTasks(){
         li.appendChild(link);
             // Append the li to the ul
         taskList.appendChild(li);
+        
     });
 
 }
@@ -121,6 +129,7 @@ function addbuttonevent(e){
 
 
 function addTask(e){
+    
     if(taskInput.value === ''){
         alert('Write something before adding.');
         return 0;
@@ -142,9 +151,9 @@ function addTask(e){
     // Store in Local Storage
     storeinlocalstorage(taskInput.value);
 
-    taskInput.value = ''
+    taskInput.value = 'Enter the note here'
     taskform.style.display='none'
-
+    
 
 
     e.preventDefault();

@@ -8,8 +8,17 @@
 
 #task{
     position: fixed;
-    bottom: 20px;
+    bottom: 5%;
+    background-color: black;
+    color: white;
 }
+/* #taskicon
+{
+    position: fixed;
+    bottom: 20px;
+    background-color: black;
+    color: white;
+} */
 
 #addtaskbtn{
     position: fixed;
